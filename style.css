@@ -8,3 +8,332 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  storefront
 */
+
+/* Global styling */
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+}
+
+
+p, h1, h2, h3, h4, a, div {
+    font-family: 'Noto Sans', sans-serif;
+} 
+
+body {
+    overflow-x: hidden;
+}
+
+.entry-title {
+    display: none;
+}
+
+.storefront-breadcrumb {
+    padding-top: 5.4rem;
+}
+
+/* Fonts */
+/* font-family: 'Wire One', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Wire+One&display=swap');
+
+/* font-family: 'Noto Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+
+/* Header logo (sat ind i php filen)*/
+.custom-logo {
+    width: 6rem;
+    top: 0;
+}
+
+.custom-logo img {
+    width: 4rem;
+    top: 0.6rem;
+    left: 0.6rem;
+    position: absolute;
+}
+
+/* Burger menu */
+.handheld-navigation {
+    width: 102vw;
+    position: absolute;
+    z-index: -2;
+    top: 4.7rem;
+    right: 0.8rem;
+    height: calc(100vh - 4.7rem);
+    display: flex;
+    justify-content: center;
+    background-color: #A4C9A2;
+   }
+   
+   .main-navigation.toggled {
+       display: block;
+       background-color: #A4C9A2;
+   }
+   
+   .menu {
+       background-color: #A4C9A2;
+       display: flex;
+       flex-direction: column;
+   }
+   
+   .menu li {
+       justify-content: center;
+       text-align: center;
+   }
+   
+   .menu li a {
+       color: #000000;
+   }
+   
+   button.menu-toggle {
+       border: none;
+       position: absolute;
+       top: 0.8rem;
+       right: 2rem;
+       background-color: none;
+       padding-right: 0.1em;
+       background-color: transparent;
+   }
+   
+   button.menu-toggle:focus {
+       outline: none;
+   }
+   
+   .menu-toggle span {
+       font-size: 0;
+   }
+   
+   .sub-menu li {
+       text-align: left;
+       margin-left: 4rem;
+   }
+   
+   .toggled-on li {
+       text-align: left;
+       margin-left: 4rem;
+   }
+   
+   button.menu-toggle:after,
+   button.menu-toggle:before,
+   button.menu-toggle span:before {
+    height:1.9px;
+    width:15px;
+    margin-left: -1em;
+    top: 70%;
+   }
+   
+   .dropdown-toggle {
+       position: absolute;
+       left: 35vw;
+   }
+   
+   .dropdown-toggle:focus {
+       outline: none;
+   }
+   
+   .columns-3 > .search {
+       display: none;
+   }
+   
+   .columns-3 > .my-account {
+       display: none;
+   }
+
+   .custom-home {
+       position: fixed;
+       bottom: 1.5rem;
+       z-index: 10000;
+       left: 20.2vw;
+       width: 2.7rem;
+   }
+
+   .cart {
+       margin-left: 55%;
+       font-size: 1.2rem;
+   }
+
+button:focus, a:focus {
+    outline: 0;
+}
+
+#masthead {
+    height: 5.2rem;
+    position: fixed;
+    width: 100vw;
+    border-bottom: 3px solid #A4C9A2;
+}
+
+.site-branding {
+    display: none;
+}
+
+.storefront-primary-navigation {
+    left: 25vw;
+    position: absolute;
+    top: 0.3rem;
+    width: 80vw;
+}
+
+
+.search-field {
+    display: none;
+}
+
+.site-search {
+    display: none;
+}
+
+
+#site-header-cart {
+    float: right;
+    position: fixed;
+    width: 10rem;
+    left: 69vw;
+}
+
+
+.landing-hero {
+    position: absolute;
+    width: 100vw;
+    z-index: 2;
+    top: 5rem;
+    left: 0;
+}
+
+.landing-hero img {
+    height: 10rem;
+}
+
+.wp-block-cover {
+    position: absolute;
+    left: 0;
+    padding: 0;
+    min-height: 18rem;
+    overflow: hidden;
+}
+
+.wp-block-cover__inner-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.divider-caption {
+    position: relative;
+    justify-self: center;
+    top: 13.5rem;
+}
+
+.wp-block-cover__image-background {
+    width: 100vw;
+
+}
+
+
+.hero-caption1 {
+    position: absolute;
+    left: 23%;
+    top: 13rem;
+    width: 20vw;
+text-align: left;
+}
+
+.hero-caption2 {
+    position: absolute;
+    left: 23%;
+    top: 7rem;
+    width: 20vw;
+    text-align: left;
+
+}
+
+.top-landing-anchor {
+    margin-top: 25rem;
+}
+
+
+.landing__heading {
+    font-family: Wire One;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    color: #68875F;
+    font-size: 3rem;
+}
+
+.landing__caption {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+/* Cart */
+
+.woocommerce-info {
+    background-color: #68875F;
+}
+
+.shop_table {
+    margin: 0;
+    padding: 0;
+}
+
+.woocommerce-billing-fields input{
+    background-color: #E1E1E1;
+}
+
+.woocommerce-cart-form {
+    margin-top: 3rem;
+}
+
+/* Product page */
+.woocommerce-noreviews {
+    background-color: #68875F;
+}
+
+.star-rating span:before {
+    color: #68875F;
+}
+
+
+/* Footer */
+
+#colophon {
+    background-color: #636363;
+
+}
+
+#menu-info-menu, #menu-kontakt-menu, #menu-some-menu {
+    background-color: transparent;
+    
+}
+
+.widget-title {
+    margin-left: 1.6rem;
+}
+
+#menu-item-48, #menu-item-52, #menu-item-51, #menu-item-53, #menu-item-54 {
+    float: left;
+    justify-self: left;
+    text-align: left;
+    text-decoration: none;
+    color: #F0F0F0;
+}
+
+#menu-item-48:before, #menu-item-52:before, #menu-item-51:before, #menu-item-53:before, #menu-item-54:before {
+    display: none;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .custom-logo {
+    
+    }
+
+    .custom-home {
+        display: none;
+    }
+
+
+}
