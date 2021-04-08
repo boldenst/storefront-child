@@ -9,25 +9,21 @@
  Text Domain:  storefront
 */
 
-/* Global styling */
+/* Global styling  der gør sig gældende flere steder på siden*/
 
+/* Denne styling fjerne den blå "boks" der kommer når man klikker på ting */
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 
 }
-@font-face {
-    font-family: 'Wire One', sans-serif;
-    src: url(http://boldenst.dk/merizeposter/wp-content/themes/storefront-child/fonts/WireOne-Regular.ttf);
-	font-weight: normal;
-}
 
 
+/* Fonten sættes på tekstelementerne i stedet for " * " Da stjernerne fra anmeldelser ellers ikke virker. */
 p, h1, h2, h3, h4, a, div {
     font-family: 'Noto Sans', sans-serif;
 } 
 
 body {
-	display: none;
     overflow-x: hidden;
 }
 
@@ -42,6 +38,10 @@ body {
 .woocommerce-breadcrumb a:first-of-type::before {
     display: none
 }
+
+/* Fonts */
+/* font-family: 'Wire One', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Wire+One&display=swap');
 
 /* font-family: 'Noto Sans', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
@@ -60,7 +60,7 @@ body {
     position: absolute;
 }
 
-/* Burger menu */
+/* Burger menu styles så den fylder hele siden, frem for den lille drop down*/
 .handheld-navigation {
     width: 105vw;
     position: absolute;
@@ -158,10 +158,14 @@ body {
        margin-left: 55%;
        font-size: 1.2rem;
    }
+/* Fjerner outline der kommer når man trykker eller markere ting */
 
 button:focus, a:focus {
     outline: 0;
 }
+
+
+/* Header og navigation på desktop styles her*/
 
 #masthead {
     height: 5.2rem;
@@ -199,7 +203,7 @@ button:focus, a:focus {
 }
 
 
-/* Index */
+/* Her styles forsiden af hjemmesiden */
 
 
 .landing-hero {
@@ -253,7 +257,7 @@ button:focus, a:focus {
 }
 
 
-/* Cart */
+/* Her styles kurv siden */
 
 .woocommerce-info {
     background-color: #68875F;
@@ -281,7 +285,7 @@ button:focus, a:focus {
     background-color: #636363;
 }
 
-/* Product page */
+/* Her styles "Kurv" siden */
 .woocommerce-noreviews {
     background-color: #68875F;
 }
@@ -294,7 +298,7 @@ button:focus, a:focus {
     margin-left: 0;
 }
 
-/* Footer */
+/* Her styles footeren */
 
 #colophon {
     background-color: #636363;
@@ -321,6 +325,7 @@ button:focus, a:focus {
 
 .site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6, .site-footer .widget .widget-title, .site-footer .widget .widgettitle {
     color: #F0F0F0;
+	letter-spacing: 0.1em;
     border-bottom: 2px solid #A4C9A2;
     padding-bottom: 0.3em;
 }
@@ -339,7 +344,7 @@ button:focus, a:focus {
 }
 
 
-/* Contact */
+/* Her styles kontakt siden */
 
 .form-column {
     background-color: #f5dddb;
@@ -366,16 +371,16 @@ input:focus, textarea:focus {
 }
 
 
-
+/* Her styles siden til desktop og tablet ved hjælp af media query*/
 @media only screen and (min-width: 768px) {
-
+/* Navigation */
     .storefront-primary-navigation {
         left: 24vw;
         position: absolute;
         top: 0.3rem;
         width: 80vw;
     }
-
+/* Logo */
     .custom-logo {
     }
 
@@ -385,11 +390,11 @@ input:focus, textarea:focus {
         left: 20vw;
         position: absolute;
     }
-
+/* Her skjules den custom "Hjem" knap som er indsat gennem PHP filen i footer */ 
     .custom-home {
         display: none;
     }
-
+/* Her styles hero-billedet på forsiden*/
     .wp-block-cover {
         position: absolute;
         left: 0;
@@ -401,6 +406,8 @@ input:focus, textarea:focus {
     .top-landing-anchor {
         margin-top: 32rem;
     }
+	
+
 
 
 }
